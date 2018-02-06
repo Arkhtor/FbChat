@@ -64,7 +64,9 @@ class fbchat extends Module
     public function uninstall()
 {
   if (!parent::uninstall() ||
-    !Configuration::deleteByName('fbchat')
+    !Configuration::deleteByName('fbchat')  ||
+    !Configuration::deleteByName('fbwiadomzal1')  ||
+    !Configuration::deleteByName('fbwiadomwyl1')
   ) {
     return false;
   }
